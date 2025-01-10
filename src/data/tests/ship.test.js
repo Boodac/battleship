@@ -1,8 +1,12 @@
 import Ship from "../ship";
 
-it("should be sunk after 4 hits, but not three", () => {
-    const instance = new Ship(4);
+const instance = new Ship(4);
 
+if("should exist", () => {
+    expect(instance).toBeTruthy();
+})
+
+it("should be sunk after 4 hits, but not three", () => {
     instance.hit();
     instance.hit();
     instance.hit();
